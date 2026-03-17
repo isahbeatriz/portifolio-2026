@@ -2,120 +2,99 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio Isabelly Beatriz</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fdfdfd;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #6a0dad;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-    }
-    .card {
-      background-color: white;
-      border: 2px solid #6a0dad;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
-    }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    .card h2 {
-      color: #6a0dad;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      margin: 0.5rem 0;
-    }
-    ul li a {
-      text-decoration: none;
-      color: #6a0dad;
-      font-weight: bold;
-      transition: color 0.2s ease;
-    }
-    ul li a:hover {
-      color: #4b0082;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #6a0dad;
-      color: white;
-      margin-top: 2rem;
-    }
-  </style>
+  <title>Portifolio isa 2026</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Portfólio Isabelly Beatriz</h1>
-    <p>Visualize minhas tarefas por categoria</p>
+    <h1> Portifolio isah 2026 </h1>
   </header>
 
-  <main class="container">
-    <div class="card">
-      <h2>JavaScript</h2>
-      <ul>
-        <li><a href="https://github.com/isahbeatriz/teste-js-.git" target="_blank">Tarefa Primeiro Link - JS</a></li>
-        <li><a href="https://github.com/isahbeatriz/variaveis" target="_blank">variaveis - JS</a></li>
-        <li><a href="link-js3.html" target="_blank">Tarefa 3 - JS</a></li>
-      </ul>
-    </div>
+  <nav>
+    <a href="#javascript">JavaScript</a>
+    <a href="#html">HTML</a>
+    <a href="#mobile">Programação Mobile</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
 
+  <!-- Categoria JavaScript -->
+  <section id="javascript" class="container">
     <div class="card">
-      <h2>HTML</h2>
-      <ul>
-        <li><a href="link-html1.html" target="_blank">Tarefa 1 - HTML</a></li>
-        <li><a href="link-html2.html" target="_blank">Tarefa 2 - HTML</a></li>
-        <li><a href="link-html3.html" target="_blank">Tarefa 3 - HTML</a></li>
-      </ul>
+      <h2>Tarefa JS</h2>
+      <p>testes js</p>
+      <a href="https://github.com/isahbeatriz/teste-js-.git" target="_blank">Ver Tarefa</a>
     </div>
+    <div class="card">
+      <h2>Tarefa JS 2</h2>
+      <p>Eventos e Interatividade</p>
+      <a href="link-js2.html" target="_blank">Ver Tarefa</a>
+    </div>
+    <div class="card">
+      <h2>Tarefa JS 3</h2>
+      <p>Jogo simples em JS</p>
+      <a href="link-js3.html" target="_blank">Ver Tarefa</a>
+    </div>
+  </section>
 
+  <!-- Categoria HTML -->
+  <section id="html" class="container">
     <div class="card">
-      <h2>Programação Mobile</h2>
-      <ul>
-        <li><a href="link-mobile1.html" target="_blank">Tarefa 1 - Mobile</a></li>
-        <li><a href="link-mobile2.html" target="_blank">Tarefa 2 - Mobile</a></li>
-        <li><a href="link-mobile3.html" target="_blank">Tarefa 3 - Mobile</a></li>
-      </ul>
+      <h2>Tarefa HTML 1</h2>
+      <p>Estrutura básica de página</p>
+      <a href="link-html1.html" target="_blank">Ver Tarefa</a>
     </div>
+    <div class="card">
+      <h2>Tarefa HTML 2</h2>
+      <p>Formulários e inputs</p>
+      <a href="link-html2.html" target="_blank">Ver Tarefa</a>
+    </div>
+    <div class="card">
+      <h2>Tarefa HTML 3</h2>
+      <p>Tabelas e listas</p>
+      <a href="link-html3.html" target="_blank">Ver Tarefa</a>
+    </div>
+  </section>
 
+  <!-- Categoria Programação Mobile -->
+  <section id="mobile" class="container">
     <div class="card">
-      <h2>Python</h2>
-      <ul>
-        <li><a href="link-python1.html" target="_blank">Tarefa 1 - Python</a></li>
-        <li><a href="link-python2.html" target="_blank">Tarefa 2 - Python</a></li>
-        <li><a href="link-python3.html" target="_blank">Tarefa 3 - Python</a></li>
-      </ul>
+      <h2>Tarefa Mobile 1</h2>
+      <p>App simples com React Native</p>
+      <a href="link-mobile1.html" target="_blank">Ver Tarefa</a>
     </div>
-  </main>
+    <div class="card">
+      <h2>Tarefa Mobile 2</h2>
+      <p>Layout responsivo</p>
+      <a href="link-mobile2.html" target="_blank">Ver Tarefa</a>
+    </div>
+    <div class="card">
+      <h2>Tarefa Mobile 3</h2>
+      <p>Consumo de API</p>
+      <a href="link-mobile3.html" target="_blank">Ver Tarefa</a>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="container">
+    <div class="card">
+      <h2>Sobre Mim</h2>
+      <p>.</p>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="container">
+    <div class="card">
+      <h2>Contato</h2>
+      <p>Email: </p>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2026 Isabelly Beatriz - Portfólio</p>
+    <p>© 2026 Portifolio isa - Todos os direitos reservados</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
