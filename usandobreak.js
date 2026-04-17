@@ -1,0 +1,1 @@
+const ferramentas=["martelo","FITA ISOLANTE"]
