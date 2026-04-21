@@ -1,74 +1,183 @@
-body {
+/* RESET */
+* {
     margin: 0;
-    font-family: 'Press Start 2P', cursive;
-    background-color: black;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
+body {
+    background: linear-gradient(135deg, #000000, #0a0a2a);
     color: white;
-  }
-  
-  header {
-    background: linear-gradient(90deg, #000, #370242);
-    padding: 20px;
-    text-align: center;
-    border-bottom: 3px solid #bd08ff;
-  }
-  
-  header h1 {
-    color: #aa00ff;
-    font-size: 24px;
-    text-shadow: 2px 2px #fff;
-  }
-  
-  nav {
+}
+
+/* INTRO */
+#intro {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, #000000, #020b1f);
     display: flex;
     justify-content: center;
-    background-color: #4d0045;
-    padding: 10px;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 14px;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    transition: opacity 1s ease;
+    overflow: hidden;
+}
+
+/* TEIA */
+.teia {
+    width: 3px;
+    height: 0;
+    background: white;
+    position: absolute;
+    top: 0;
+    animation: descerTeia 1s ease-out forwards;
+}
+
+/* MÁSCARA HOMEM-ARANHA */
+.spiderman {
+    width: 120px;
+    position: absolute;
+    top: -150px;
+    animation: descerHomem 1.5s ease-out forwards;
+    animation-delay: 0.3s;
+    filter: drop-shadow(0 0 15px red);
+}
+
+/* TEXTO INTRO */
+.intro-text {
+    color: #ff0000;
+    margin-top: 180px;
+    font-size: 2rem;
+    opacity: 0;
+    animation: aparecerTexto 1s ease forwards;
+    animation-delay: 1.8s;
+    text-shadow: 0 0 10px red;
+}
+
+/* ANIMAÇÕES */
+@keyframes descerTeia {
+    from { height: 0; }
+    to { height: 300px; }
+}
+
+@keyframes descerHomem {
+    from { top: -150px; }
+    to { top: 150px; }
+}
+
+@keyframes aparecerTexto {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #8B0000, #000000, #001f5c);
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 3px solid #ff0000;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #ff0000;
+}
+
+header p {
+    color: #ccc;
+    margin-top: 10px;
+}
+
+/* MENU */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+nav ul li {
+    cursor: pointer;
+    padding: 10px 20px;
     transition: 0.3s;
-  }
-  
-  nav a:hover {
-    color: #ff00e6;
-    text-shadow: 0 0 5px #ea00ff;
-  }
-  
-  .container {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  
-  .card {
-    background-color: #3f004d;
-    border: 2px solid #ff00ff;
-    padding: 15px;
-    text-align: center;
-    border-radius: 10px;
-    transition: transform 0.3s;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #fb00ff;
-  }
-  
-  .card a {
-    color: #d900ff;
-    text-decoration: none;
     font-weight: bold;
-  }
-  
-  footer {
-    background-color: #000;
-    color: #fff;
+}
+
+nav ul li:hover {
+    border-bottom: 2px solid #ff0000;
+    color: #00aaff;
+}
+
+/* MAIN */
+main {
+    padding: 40px;
+}
+
+/* SEÇÕES */
+.secao {
+    display: none;
+}
+
+.secao.ativa {
+    display: block;
+}
+
+/* TITULOS */
+h2 {
+    margin-bottom: 20px;
+    color: #00aaff;
+}
+
+/* CARDS */
+.card {
+    background: #111;
+    border-left: 5px solid #ff0000;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    border-left: 5px solid #00aaff;
+}
+
+.card h3 {
+    color: #ff0000;
+}
+
+.card p {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+.card a {
+    text-decoration: none;
+    color: #00aaff;
+    font-weight: bold;
+}
+
+.card a:hover {
+    color: #ff0000;
+}
+
+/* FOOTER */
+footer {
     text-align: center;
-    padding: 10px;
-    border-top: 3px solid #d900ff;
-  }
+    padding: 20px;
+    border-top: 2px solid #222;
+    margin-top: 30px;
+    color: #888;
+}
