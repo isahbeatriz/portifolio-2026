@@ -20,7 +20,7 @@ body {
     background: radial-gradient(circle, #000000, #020b1f);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     z-index: 9999;
     transition: opacity 1s ease;
@@ -34,50 +34,52 @@ body {
     background: white;
     position: absolute;
     top: 0;
-    animation: descerTeia 1s ease-out forwards;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: descerTeia 1.2s ease-out forwards;
 }
 
-/* MÁSCARA HOMEM-ARANHA */
+/* HOMEM-ARANHA IMAGEM */
 .spiderman {
-    width: 120px;
+    width: 140px;
     position: absolute;
-    top: -150px;
-    animation: descerHomem 1.5s ease-out forwards;
-    animation-delay: 0.3s;
-    filter: drop-shadow(0 0 15px red);
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: descerHomem 1.6s ease-out forwards;
+    animation-delay: 0.2s;
+    filter: drop-shadow(0 0 20px red);
 }
 
 /* TEXTO INTRO */
 .intro-text {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    text-align: center;
     color: #ff0000;
-    margin-top: 180px;
-    font-size: 2rem;
+    font-size: 2.2rem;
     opacity: 0;
     animation: aparecerTexto 1s ease forwards;
     animation-delay: 1.8s;
-    text-shadow: 0 0 10px red;
+    text-shadow: 0 0 15px red;
 }
 
 /* ANIMAÇÕES */
 @keyframes descerTeia {
     from { height: 0; }
-    to { height: 300px; }
+    to { height: 350px; }
 }
 
 @keyframes descerHomem {
-    from { top: -150px; }
-    to { top: 150px; }
+    0% { top: -200px; transform: translateX(-50%) rotate(-10deg); }
+    70% { top: 180px; transform: translateX(-50%) rotate(5deg); }
+    100% { top: 160px; transform: translateX(-50%) rotate(0deg); }
 }
 
 @keyframes aparecerTexto {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* HEADER */
@@ -154,35 +156,7 @@ h2 {
     border-left: 5px solid #00aaff;
 }
 
-.card h3 {
-    color: #ff0000;
-}
-
-.card p {
-    margin: 10px 0;
-    color: #ccc;
-}
-
-.card a {
-    text-decoration: none;
-    color: #00aaff;
-    font-weight: bold;
-}
-
-.card a:hover {
-    color: #ff0000;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    border-top: 2px solid #222;
-    margin-top: 30px;
-    color: #888;
-}
-
-/* HEADER CLICÁVEL */
+/* HEADER DO CARD */
 .card-header {
     display: flex;
     justify-content: space-between;
@@ -193,17 +167,15 @@ footer {
 /* SETA */
 .seta {
     transition: transform 0.3s ease;
-    font-size: 18px;
 }
 
-/* CONTEÚDO ESCONDIDO */
+/* CONTEÚDO */
 .card-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
 }
 
-/* QUANDO ABRE */
 .card-content.ativo {
     max-height: 500px;
     margin-top: 10px;
@@ -217,5 +189,13 @@ pre {
     border-radius: 8px;
     overflow-x: auto;
     margin-top: 10px;
-    font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #222;
+    margin-top: 30px;
+    color: #888;
 }
