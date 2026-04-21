@@ -12,11 +12,8 @@
     <div id="intro">
         <div class="teia"></div>
 
-        <svg class="spiderman" viewBox="0 0 200 200">
-            <circle cx="100" cy="100" r="60" fill="#ff0000"/>
-            <path d="M60 90 Q80 70 100 90 Q80 100 60 90" fill="white"/>
-            <path d="M100 90 Q120 70 140 90 Q120 100 100 90" fill="white"/>
-        </svg>
+        <!-- IMAGEM DO HOMEM-ARANHA -->
+        <img src="spiderman.png" alt="Homem-Aranha" class="spiderman">
 
         <h1 class="intro-text">Meu Portfólio</h1>
     </div>
@@ -48,7 +45,6 @@
 
                 <div class="card-content">
                     <p>Local do Arquivo: html/atividade1.html</p>
-
                     <pre>
 &lt;h1&gt;Olá Mundo&lt;/h1&gt;
 &lt;p&gt;Minha primeira atividade&lt;/p&gt;
@@ -56,21 +52,6 @@
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-header" onclick="toggleCard(this)">
-                    <span>Atividade 2</span>
-                    <span class="seta">▶</span>
-                </div>
-
-                <div class="card-content">
-                    <p>Local do Arquivo: html/atividade2.html</p>
-
-                    <pre>
-&lt;h2&gt;Título&lt;/h2&gt;
-&lt;p&gt;Outra atividade&lt;/p&gt;
-                    </pre>
-                </div>
-            </div>
         </section>
 
         <!-- JavaScript -->
@@ -85,14 +66,12 @@
 
                 <div class="card-content">
                     <p>Local do Arquivo: js/teste.js</p>
-
                     <pre>
 console.log("Hello world");
-x = 8 + 9;
-console.log(x);
                     </pre>
                 </div>
             </div>
+
         </section>
 
         <!-- Gamma -->
@@ -107,12 +86,12 @@ console.log(x);
 
                 <div class="card-content">
                     <p>Descrição da atividade</p>
-
                     <pre>
-Conteúdo da atividade Gamma
+Conteúdo da atividade
                     </pre>
                 </div>
             </div>
+
         </section>
 
     </main>
@@ -124,11 +103,7 @@ Conteúdo da atividade Gamma
     <script>
         function mostrarSecao(secaoId) {
             const secoes = document.querySelectorAll('.secao');
-
-            secoes.forEach(secao => {
-                secao.classList.remove('ativa');
-            });
-
+            secoes.forEach(secao => secao.classList.remove('ativa'));
             document.getElementById(secaoId).classList.add('ativa');
         }
 
