@@ -27,8 +27,8 @@
 
         <nav>
             <ul>
-                <li onclick="mostrarSecao('html')">JaavaScript</li>
-                <li onclick="mostrarSecao('js')">html</li>
+                <li onclick="mostrarSecao('html')">HTML</li>
+                <li onclick="mostrarSecao('js')">JavaScript</li>
                 <li onclick="mostrarSecao('gamma')">Gamma</li>
             </ul>
         </nav>
@@ -38,29 +38,60 @@
 
         <!-- HTML -->
         <section id="html" class="secao ativa">
-            <h2>Projetos em JavaScript</h2>
+            <h2>Projetos em HTML</h2>
 
             <div class="card">
-                <h3>Atividade js</h3>
-                <p>carro.js</p>
-                <a href="https://isahbeatriz.github.io/teste-js-/carro.js">Ver projeto</a>
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Atividade 1</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: html/atividade1.html</p>
+
+                    <pre>
+&lt;h1&gt;Olá Mundo&lt;/h1&gt;
+&lt;p&gt;Minha primeira atividade&lt;/p&gt;
+                    </pre>
+                </div>
             </div>
 
             <div class="card">
-                <h3>Atividade 2</h3>
-                <p>Descrição da atividade</p>
-                <a href="#">Ver projeto</a>
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Atividade 2</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: html/atividade2.html</p>
+
+                    <pre>
+&lt;h2&gt;Título&lt;/h2&gt;
+&lt;p&gt;Outra atividade&lt;/p&gt;
+                    </pre>
+                </div>
             </div>
         </section>
 
         <!-- JavaScript -->
         <section id="js" class="secao">
-            <h2>Projetos em html</h2>
+            <h2>Projetos em JavaScript</h2>
 
             <div class="card">
-                <h3>Atividade 1</h3>
-                <p>Descrição da atividade</p>
-                <a href="#">Ver projeto</a>
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Atividade 1</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: js/teste.js</p>
+
+                    <pre>
+console.log("Hello world");
+x = 8 + 9;
+console.log(x);
+                    </pre>
+                </div>
             </div>
         </section>
 
@@ -69,9 +100,18 @@
             <h2>Projetos em Gamma</h2>
 
             <div class="card">
-                <h3>Atividade 1</h3>
-                <p>Descrição da atividade</p>
-                <a href="#">Ver projeto</a>
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Atividade 1</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Descrição da atividade</p>
+
+                    <pre>
+Conteúdo da atividade Gamma
+                    </pre>
+                </div>
             </div>
         </section>
 
@@ -90,6 +130,19 @@
             });
 
             document.getElementById(secaoId).classList.add('ativa');
+        }
+
+        function toggleCard(element) {
+            const content = element.nextElementSibling;
+            const seta = element.querySelector('.seta');
+
+            content.classList.toggle('ativo');
+
+            if (content.classList.contains('ativo')) {
+                seta.style.transform = "rotate(90deg)";
+            } else {
+                seta.style.transform = "rotate(0deg)";
+            }
         }
 
         // INTRO SOME
