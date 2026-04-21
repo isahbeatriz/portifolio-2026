@@ -1,105 +1,107 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Portifolio isa 2026</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Desenvolvedora</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1> Portifolio isah 2026 </h1>
-  </header>
 
-  <nav>
-    <a href="#javascript">JavaScript</a>
-    <a href="#html">HTML</a>
-    <a href="#mobile">Programação Mobile</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#contato">Contato</a>
-  </nav>
+    <!-- INTRO ANIMADA -->
+    <div id="intro">
+        <div class="teia"></div>
 
-  <!-- Categoria JavaScript -->
-  <section id="javascript" class="container">
-    <div class="card">
-      <h2>Tarefa JS</h2>
-      <p>testes js</p>
-      <a href="https://github.com/isahbeatriz/teste-js-.git" target="_blank">Ver Tarefa</a>
-    </div>
-    <div class="card">
-      <h2>Tarefa JS 2</h2>
-      <p>Eventos e Interatividade</p>
-      <a href="link-js2.html" target="_blank">Ver Tarefa</a>
-    </div>
-    <div class="card">
-      <h2>Tarefa JS 3</h2>
-      <p>Jogo simples em JS</p>
-      <a href="link-js3.html" target="_blank">Ver Tarefa</a>
-    </div>
-    <div class="card">
-      <h2>Tarefa JS 4</h2>
-      <p>codigo explicado</p>
-      <a href="https://isahbeatriz.github.io/portifolio-2026/" target="_blank">Ver Tarefa</a>
-    </div>
-  </section>
+        <svg class="spiderman" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="60" fill="#ff0000"/>
+            <path d="M60 90 Q80 70 100 90 Q80 100 60 90" fill="white"/>
+            <path d="M100 90 Q120 70 140 90 Q120 100 100 90" fill="white"/>
+        </svg>
 
-  <!-- Categoria HTML -->
-  <section id="html" class="container">
-    <div class="card">
-      <h2>Tarefa HTML 1</h2>
-      <p>Estrutura básica de página</p>
-      <a href="link-html1.html" target="_blank">Ver Tarefa</a>
+        <h1 class="intro-text">Meu Portfólio</h1>
     </div>
-    <div class="card">
-      <h2>Tarefa HTML 2</h2>
-      <p>Formulários e inputs</p>
-      <a href="link-html2.html" target="_blank">Ver Tarefa</a>
-    </div>
-    <div class="card">
-      <h2>Tarefa HTML 3</h2>
-      <p>Tabelas e listas</p>
-      <a href="link-html3.html" target="_blank">Ver Tarefa</a>
-    </div>
-  </section>
 
-  <!-- Categoria Programação Mobile -->
-  <section id="mobile" class="container">
-    <div class="card">
-      <h2>Tarefa Mobile 1</h2>
-      <p>App simples com React Native</p>
-      <a href="link-mobile1.html" target="_blank">Ver Tarefa</a>
-    </div>
-    <div class="card">
-      <h2>Tarefa Mobile 2</h2>
-      <p>Layout responsivo</p>
-      <a href="link-mobile2.html" target="_blank">Ver Tarefa</a>
-    </div>
-    <div class="card">
-      <h2>Tarefa Mobile 3</h2>
-      <p>Consumo de API</p>
-      <a href="link-mobile3.html" target="_blank">Ver Tarefa</a>
-    </div>
-  </section>
+    <header>
+        <h1>Meu Portfólio</h1>
+        <p>Projetos e atividades desenvolvidas em aula</p>
 
-  <!-- Sobre -->
-  <section id="sobre" class="container">
-    <div class="card">
-      <h2>Sobre Mim</h2>
-      <p>.</p>
-    </div>
-  </section>
+        <nav>
+            <ul>
+                <li onclick="mostrarSecao('html')">HTML</li>
+                <li onclick="mostrarSecao('js')">JavaScript</li>
+                <li onclick="mostrarSecao('gamma')">Gamma</li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Contato -->
-  <section id="contato" class="container">
-    <div class="card">
-      <h2>Contato</h2>
-      <p>Email: </p>
-    </div>
-  </section>
+    <main>
 
-  <footer>
-    <p>© 2026 Portifolio isa - Todos os direitos reservados</p>
-  </footer>
+        <!-- HTML -->
+        <section id="html" class="secao ativa">
+            <h2>Projetos em HTML</h2>
 
-  <script src="script.js"></script>
+            <div class="card">
+                <h3>Atividade 1</h3>
+                <p>Descrição da atividade</p>
+                <a href="https://github.com/isahbeatriz/teste-js-">Ver projeto</a>
+            </div>
+
+            <div class="card">
+                <h3>Atividade 2</h3>
+                <p>Descrição da atividade</p>
+                <a href="#">Ver projeto</a>
+            </div>
+        </section>
+
+        <!-- JavaScript -->
+        <section id="js" class="secao">
+            <h2>Projetos em JavaScript</h2>
+
+            <div class="card">
+                <h3>Atividade 1</h3>
+                <p>Descrição da atividade</p>
+                <a href="#">Ver projeto</a>
+            </div>
+        </section>
+
+        <!-- Gamma -->
+        <section id="gamma" class="secao">
+            <h2>Projetos em Gamma</h2>
+
+            <div class="card">
+                <h3>Atividade 1</h3>
+                <p>Descrição da atividade</p>
+                <a href="#">Ver projeto</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 - Meu Portfólio</p>
+    </footer>
+
+    <script>
+        function mostrarSecao(secaoId) {
+            const secoes = document.querySelectorAll('.secao');
+
+            secoes.forEach(secao => {
+                secao.classList.remove('ativa');
+            });
+
+            document.getElementById(secaoId).classList.add('ativa');
+        }
+
+        // INTRO SOME
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                document.getElementById("intro").style.opacity = "0";
+                setTimeout(() => {
+                    document.getElementById("intro").style.display = "none";
+                }, 1000);
+            }, 3500);
+        });
+    </script>
+
 </body>
 </html>
