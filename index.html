@@ -321,7 +321,505 @@ function outraconta(){
                 </div>
             </div>
 
+</div>
 
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>operações básicas </span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: opercaobasica.js</p>
+                    <pre>
+function soma(a, b){
+    return a + b
+}
+
+function subtracao(a, b){
+    return a - b
+}
+function multiplicacao(a, b){
+    return a * b
+}
+function divisao(a, b){
+    return a / b
+}
+
+n1 = 30
+n2 = 20
+
+
+console.log(`O resultado da soma entre ${n1} e ${n2} é: ${soma(n1, n2)}`)
+console.log(`O resultado da subtracao entre ${n1} e ${n2} é: ${subtracao(n1, n2)}`)
+console.log(`O resultado da multiplicacao entre ${n1} e ${n2} é: ${multiplicacao(n1, n2)}`)
+console.log(`O resultado da divisao entre ${n1} e ${n2} é: ${divisao(n1, n2)}`)
+        </pre>
+                </div>
+            </div>
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>array</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: array.js</p>
+                    <pre>
+let frutas = ["maça", "banana", "laranja"];
+
+console.log(frutas);
+console.log(frutas.length);
+console.log("="*30);
+
+frutas.push("manga");
+console.log(frutas)
+console.log(frutas.length);
+
+frutas.pop();
+frutas.pop();
+frutas.pop();
+frutas.pop();
+console.log(frutas)
+console.log(frutas.length);
+
+frutas.push('uva')
+frutas.push('amora')
+frutas.push("mixirica","abacate","abacaxi")
+console.log(frutas)
+console.log(frutas.length);
+
+console.log(frutas[1])
+console.log("O total de registro é de",frutas.length)
+
+frutas.unshift("cereja")
+console.log(frutas)
+console.log(frutas.length)
+   
+        </pre>
+                </div>
+            </div>
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>usando for </span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: usando for.js</p>
+                    <pre>
+import frutaLista from "./array.js"
+
+"use strict"
+
+let notas = [8, 7, 6, 9, 10]
+let soma = 0
+
+for (let i = 0; i < notas.length; i++){
+    soma += notas[i]
+}
+
+let media = soma / notas.length
+console.log("A media das notas é:",media)
+
+console.log('='*30)
+
+for (let i = 1; i <= 5; i++){
+    console.log('contando', i)
+}
+
+
+console.log('='*30)
+console.log('Tabuada')
+
+for (let cont = 1; cont <= 10; cont++){
+    console.log(`2 x ${cont} = ${2*cont}`)
+}
+
+console.log('=' * 30)
+
+const frutas = ['banana', 'laranja', 'maca', 'pera']
+
+for(const fruta of frutas){
+    console.log(fruta)
+}
+        </pre>
+                </div>
+            </div>
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Usando Break</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: usandoBreak.js</p>
+                    <pre>
+const ferramentas = ["martelo", "fita isolante", "chave", "alicate", "trena", "chave de fenda"]
+
+for( let i = 0; i < ferramentas.length; i++){
+    console.log("verificando: "+ ferramentas[i])
+    if(ferramentas[i] === "chave"){
+        console.log("chave encontrada. Parando a busca.")
+        break
+    }
+}
+
+        </pre>
+                </div>
+            </div>
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span> Break Continue</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: break_continue.js</p>
+                    <pre>
+let carros_estcionados = 0
+const limitemaxiomo = 7
+console.log('---iniciando verificação vagas---')
+for (let vagas = 1; vagas <= limitemaxiomo; vagas++) {
+    if(vagas===4 || vagas===7 || vagas===3){
+        console.log(`vaga ${vagas}:[interditada]-pulando...`)
+        continue
+    }
+    carros_estcionados++
+    console.log(`vaga ${vagas}:[ocupada]-carros estacionados ${carros_estcionados}`)
+    if(carros_estcionados===limitemaxiomo){
+        console.log('---limite atingido! fechar portão---')
+        break
+    }
+    console.log('---relatório encerrado---')
+}
+        </pre>
+                </div>
+            </div>
+
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>objeto</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: objeto.js</p>
+                    <pre>
+let pessoa = {nome:"maria", idade: "30"}
+console.log(pessoa.nome)
+console.log(pessoa["idade"])
+
+pessoa.profissao = "Desenvolvedora"
+pessoa.idade = 31
+console.log(pessoa)
+        </pre>
+                </div>
+            </div>
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Filtro de Objetos</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: filtrar.js</p>
+                    <pre>
+const usuarios = [ //Lista (array)
+    {nome: "carlos", idade: 32},
+    {nome: "Ana", idade: 28},
+    {nome: "felipe", idade: 40}
+]
+
+// encontrando um objeto / o find vai buscar / === exato
+const ana = usuarios.find(usuarios => usuarios.nome === "ana")
+console.log(ana)
+
+const usuariosAcimaDe30 = usuarios.filter(usuarios => usuarios.idade > 30)
+console.log(usuariosAcimaDe30)
+
+const usuariosOrdenadosPorIdade = usuarios.sort((a, b) => a.idade - b.idade)
+console.log(usuariosOrdenadosPorIdade)
+
+const usuariosOrdenadosAoContrarioPorIdade = usuarios.sort((a, b) => b.idade - a.idade)
+console.log(usuariosOrdenadosAoContrarioPorIdade)
+        </pre>
+                </div>
+            </div>
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Conchetes</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: conchete.js</p>
+                    <pre>
+const cliente = {
+  nome: "Andre",
+  idade: 32,
+  cpf: "1122233345",
+  email: "andre@dominio.com",
+};
+
+console.log(
+  `O nome do cliente é ${cliente["nome"]} e essa pessoa tem ${cliente["idade"]} anos.`
+);
+
+const chaves = ["nome", "idade", "cpf", "email", "altura"];
+
+chaves.forEach((chave) => {
+  console.log(`A chave ${chave} tem valor ${cliente[chave]}`);
+});
+        </pre>
+                </div>
+            </div>
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Substring</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: substring.js</p>
+                    <pre>
+const cliente = {
+  nome: "Andre",
+  idade: 32,
+  cpf: "1122233345",
+  email: "andre@dominio.com",
+};
+
+console.log(
+  `O nome do cliente é ${cliente.nome} e essa pessoa tem ${cliente.idade} anos.`
+);
+
+console.log(`Os 3 primeiros digitos do CPF são ${cliente.cpf.substring(0, 3)}`);
+        </pre>
+                </div>
+            </div>
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Objeto 2</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: Objet2.js</p>
+                    <pre>
+const listaCPFs = [1111111, 22222, 3333];
+
+const informacoesPessoa = ["nome", "Jose", "idade", 32, "CPF", "1111222333"];
+
+console.log(informacoesPessoa[1]);
+
+const objetoPessoa = {
+  idade: 32,
+  nome: "Jose",
+};
+        </pre>
+                </div>
+            </div>
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Alterar Objetos</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo:alterar.js</p>
+                    <pre>
+const pessoa = {
+  nome: "Luma",
+  profissao: "Engenheira",
+};
+console.log(pessoa.nome);
+console.log(pessoa.telefone);
+pessoa.telefone = "11 2223333444";
+console.log(pessoa.telefone);
+pessoa.nome = "Luma Silva";
+console.log(pessoa);
+const novaPessoa = {
+  nome: "Pedro",
+};
+pessoa = novaPessoa;
+        </pre>
+                </div>
+            </div>
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>leitura de arquivos</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: leitura.js</p>
+                    <pre>
+const dados = require("./2.cliente.json")
+console.log(dados)
+console.log(typeof dados)
+const clienteEmString = JSON.stringify(dados)
+console.log(clienteEmString)
+console.log(typeof clienteEmString)
+console.log(clienteEmString.nome)
+const objetoCliente = JSON.parse(clienteEmString)
+console.log(objetoCliente)
+        </pre>
+                </div>
+            </div>
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Cliente</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: cliente.js</p>
+                    <pre>
+{
+    "nome": "Joao",
+    "email": "Joao@firma.com",
+    "telefone": ["11223344", "11922334453"],
+    "enderecp": {
+        "rua": "R. josaph Climber",
+        "numero": 404,
+        "apartamento": true,
+        "complemento": "ap 934"
+    }
+}
+        </pre>
+                </div>
+            </div>
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Conjunto de Números</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: conjunto números.js</p>
+                    <pre>
+function Media(numeros){
+    let soma = 0
+    for(let i = 0; i < numeros.length; i++){
+        soma += numeros[i]
+    }
+    return soma / numeros.length
+}
+
+console.log(Media([10,20,30]))
+
+        </pre>
+                </div>
+            </div>
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Lista de Livros </span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: lista livros.js</p>
+                    <pre>
+const precosLivros = [
+    {
+        titulo: 'JavaScript',
+        preco: 25
+    },
+    {
+        titulo: 'PHP',
+        preco: 15
+    },
+    {
+        titulo: 'Java',
+        preco: 30
+    },
+    {
+        titulo: 'Elixir',
+        preco: 50
+    },
+    {
+        titulo: 'Go',
+        preco: 45
+    },
+    {
+        titulo: 'Python',
+        preco: 20
+    }
+]
+
+module.exports = precosLivros
+        </pre>
+                </div>
+            </div>
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Organizando lista</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: organizandoLista.js</p>
+                    <pre>
+function selectionSort(arr) {
+    for (let i = 0; i < arr.length; i++){
+        let min = i
+        for (let j = i + 1; j < arr.length; j++){
+            if (arr[j] < arr[min]) min = j   
+        }
+        [arr[i], arr[min]] = [arr[min], arr[i]]
+    }
+    return arr
+}
+
+        </pre>
+                </div>
+            </div>
 
 
         </section>
