@@ -884,18 +884,18 @@ Conteúdo da atividade
             document.getElementById(secaoId).classList.add('ativa');
         }
 
-        function toggleCard(element) {
-            const content = element.nextElementSibling;
-            const seta = element.querySelector('.seta');
+        function toggleCard(header) {
+    const content = header.nextElementSibling;
+    const seta = header.querySelector(".seta");
 
-            content.classList.toggle('ativo');
-
-            if (content.classList.contains('ativo')) {
-                seta.style.transform = "rotate(90deg)";
-            } else {
-                seta.style.transform = "rotate(0deg)";
-            }
-        }
+    if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+        content.style.maxHeight = "0px";
+        seta.style.transform = "rotate(0deg)";
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        seta.style.transform = "rotate(90deg)";
+    }
+}
 
         // INTRO SOME
         window.addEventListener("load", () => {
