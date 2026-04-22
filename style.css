@@ -37,19 +37,6 @@ body {
     left: 50%;
     transform: translateX(-50%);
     animation: descerTeia 1.2s ease-out forwards;
-}
-
-/* HOMEM-ARANHA IMAGEM */
-.spiderman {
-    width: 140px;
-    position: absolute;
-    top: -200px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: descerHomem 1.6s ease-out forwards;
-    animation-delay: 0.2s;
-    filter: drop-shadow(0 0 20px red);
-}
 
 /* TEXTO INTRO */
 .intro-text {
@@ -69,13 +56,7 @@ body {
 @keyframes descerTeia {
     from { height: 0; }
     to { height: 350px; }
-}
 
-@keyframes descerHomem {
-    0% { top: -200px; transform: translateX(-50%) rotate(-10deg); }
-    70% { top: 180px; transform: translateX(-50%) rotate(5deg); }
-    100% { top: 160px; transform: translateX(-50%) rotate(0deg); }
-}
 
 @keyframes aparecerTexto {
     from { opacity: 0; transform: translateY(40px); }
