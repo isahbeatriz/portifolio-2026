@@ -879,19 +879,34 @@ Conteúdo da atividade
     </footer>
 
   <script>
-function toggleCard(element) {
-    const content = element.nextElementSibling;
-    const seta = element.querySelector('.seta');
+        function mostrarSecao(secaoId) {
+            const secoes = document.querySelectorAll('.secao');
+            secoes.forEach(secao => secao.classList.remove('ativa'));
+            document.getElementById(secaoId).classList.add('ativa');
+        }
 
-    if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-        seta.style.transform = "rotate(0deg)";
-    } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-        seta.style.transform = "rotate(90deg)";
-    }
-}
-</script>
+        function toggleCard(element) {
+            const content = element.nextElementSibling;
+            const seta = element.querySelector('.seta');
 
+            content.classList.toggle('ativo');
+
+            if (content.classList.contains('ativo')) {
+                seta.style.transform = "rotate(90deg)";
+            } else {
+                seta.style.transform = "rotate(0deg)";
+            }
+        }
+
+        // INTRO SOME
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                document.getElementById("intro").style.opacity = "0";
+                setTimeout(() => {
+                    document.getElementById("intro").style.display = "none";
+                }, 1000);
+            }, 3500);
+        });
+    </script>
 </body>
 </html>
