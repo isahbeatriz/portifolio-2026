@@ -83,14 +83,31 @@ console.log("o valor da area e:", t);
 
 <div class="card">
                 <div class="card-header" onclick="toggleCard(this)">
-                    <span>Atividade 2</span>
+                    <span>código explicado</span>
                     <span class="seta">▶</span>
                 </div>
 
                 <div class="card-content">
-                    <p>Local do Arquivo: html/atividade1.html</p>
+                    <p>Local do Arquivo: selectionSort.js</p>
                     <pre>
-
+function selectionSort(arr) { //Define a função que recebe um array arr como parâmetro.
+    for(let i = 0; i < arr.length; i++) { //Este é o loop externo. Ele percorre todo o array.
+        // A variável i representa a posição atual que estamos tentando preencher com o valor correto
+        // (o menor valor restante).
+        let min = i; //Aqui, assumimos temporariamente que o menor valor do que resta do array está na posição i.
+        // Guardamos esse índice na variável min.
+        for(let j = i+1; j < arr.length; j++) { //Este é o loop interno. Ele começa em i + 1 (a próxima posição)
+            // e vai até o final do array para procurar se existe algum número ainda menor que o que está em arr[min].
+            if(arr[j] < arr[min]) min = j; //Se encontrarmos um valor na posição j que seja menor
+            // que o valor na posição min, atualizamos min para ser o novo índice j.
+            // Atenção: aqui apenas guardamos a posição do menor número, ainda não trocamos nada.
+        } //Fim do loop interno. Agora temos certeza de que min é o índice do menor elemento da parte não ordenada.
+        [arr[i], arr[min]] = [arr[min], arr[i]]; //Esta linha usa destructuring assignment para trocar
+        // os valores de lugar. O valor que estava em arr[i] vai para a posição arr[min] e vice-versa.
+        // É o momento em que o menor valor encontrado "vai para o início" da parte não ordenada.
+    } //Fim do loop externo. Repetimos o processo para a próxima posição i.
+    return arr; //Após organizar todos os elementos, a função retorna o array agora ordenado.
+}
         </pre>
                 </div>
             </div>
@@ -112,45 +129,212 @@ console.log("o valor da area e:", t);
 
 <div class="card">
                 <div class="card-header" onclick="toggleCard(this)">
-                    <span>Atividade 2</span>
+                    <span>teste 1</span>
                     <span class="seta">▶</span>
                 </div>
 
                 <div class="card-content">
-                    <p>Local do Arquivo: html/atividade1.html</p>
+                    <p>Local do Arquivo: teste.html</p>
                     <pre>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes javascript</title>
+</head>
+<body>
+    <script>
+        console.log("hello world");
+console.log(0123456789);
+console.log("isabelly");
+x=8+9;
+console.log(x);
+y=81;
+z=9;
+t=y+z;
+console.log(t);
+console.log("o resultado é:",t);
+console.log("o outro resultado é:",x);
+    </script>
 
+    <script src="teste2.js"></script>
+</body>
+</html>
         </pre>
                 </div>
             </div>
 
 <div class="card">
                 <div class="card-header" onclick="toggleCard(this)">
-                    <span>Atividade 2</span>
+                    <span>média</span>
                     <span class="seta">▶</span>
                 </div>
 
                 <div class="card-content">
-                    <p>Local do Arquivo: html/atividade1.html</p>
+                    <p>Local do Arquivo: médi_se.js</p>
                     <pre>
-
+let aluno="Robson";
+let n1=99;
+let n2=100;
+let n3=99;
+let n4=100;
+let media=0;
+let result="";
+media=(n1+n2+n3+n4)/4;
+if(media>=70){
+result="aprovado"
+}else{
+    result="reprovado"
+}
+console.log("O aluno " +aluno+ " tem a média "+media+" e está: "+result);
         </pre>
                 </div>
             </div>
 
 <div class="card">
                 <div class="card-header" onclick="toggleCard(this)">
-                    <span>Atividade 2</span>
+                    <span>notas</span>
                     <span class="seta">▶</span>
                 </div>
 
                 <div class="card-content">
-                    <p>Local do Arquivo: html/atividade1.html</p>
+                    <p>Local do Arquivo: notas.js</p>
                     <pre>
-
+aluno="pedro";
+nota1=5;
+nota2=2;
+nota3=7;
+nota4=4;
+media=(nota1+nota2+nota3+nota4)/4;
+console.log("o aluno",aluno,"tem a media",media);
         </pre>
                 </div>
             </div>
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>teste</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: teste.js</p>
+                    <pre>
+console.log("hello world");
+console.log(0123456789);
+console.log("isabelly");
+x=8+9;
+console.log(x);
+y=81;
+z=9;
+t=y+z;
+console.log(t);
+console.log("o resultado é:",t);
+console.log("o outro resultado é:",x);
+        </pre>
+                </div>
+            </div>
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>teste 2</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: teste2.js</p>
+                    <pre>
+b=5;
+a=12;
+t=b*a/2;
+console.log("O valor da area é:",t);
+        </pre>
+                </div>
+            </div>
+
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>teste 3</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: teste3.js</p>
+                    <pre>
+delta=0;
+b=5;
+a=2;
+c=8;
+x=b*b*4*a*c;
+console.log("o valor é, delta", x);
+        </pre>
+                </div>
+            </div>
+
+</div>
+
+<div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>variáveis</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: variáveis</p>
+                    <pre>
+let a = 40;
+let b = 10;
+let c = 20;
+let total = 0;
+let totald = 0;
+let x = c;
+x = 5;
+total = a + b + c;      
+totald = a + b + c / x;  
+console.log("valor do total é:", total);
+console.log("valor do totald é:", totald);
+console.log(outraconta());
+console.log(media())
+
+//inicio da function
+
+function outraconta(){
+    var d=10;
+    var e=20;
+    var f=30;
+    var tot=0;
+    var totd=0;
+    var xx=100
+    tot= d+e+f;
+    totd = (d+e+f)/xx;
+    //console.log ("valor de tot é", tot);
+    //console.log ("valor de totd é", totd);
+    return tot;
+    return totd;
+   }
+
+
+   function media(){
+    let nfinal=0;
+    n1=30;
+    n2=90;
+    n3=100;
+    nfinal=(n1+n2+n3)/3
+    console.log ('a média final do aluno é', nfinal.toFixed(2));
+   }
+        </pre>
+                </div>
+            </div>
+
+
 
 
         </section>
