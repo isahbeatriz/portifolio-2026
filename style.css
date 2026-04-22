@@ -171,7 +171,7 @@ h2 {
 
 /* CONTEÚDO */
 .card-content {
-    max-height:0;
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
 }
