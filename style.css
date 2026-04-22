@@ -37,6 +37,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     animation: descerTeia 1.2s ease-out forwards;
+}
 
 /* TEXTO INTRO */
 .intro-text {
