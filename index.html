@@ -771,6 +771,30 @@ console.log("O outro resultado é:", -b - d/d / a*2);
                 </div>
             </div>
 
+    <div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>Ordenando.js</span>
+                    <span class="seta">▶</span>
+                </div>
+
+                <div class="card-content">
+                    <p>Local do Arquivo: organizandoLista.js</p>
+                    <pre>
+const livros = require('./listaLivros');
+let maisBarato = 0;
+for (let atual = 0; atual < livros.length; atual++){
+    if (livros[atual].preco < livros[maisBarato].preco){
+        maisBarato = atual
+    }
+}
+console.log(`o livro mais barato custa
+    ${livros[maisBarato].preco}  e o título é
+    ${livros[maisBarato].titulo}`)
+
+        </pre>
+                </div>
+            </div>
+
 
         </section>
 
