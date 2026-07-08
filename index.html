@@ -795,7 +795,36 @@ console.log(`o livro mais barato custa
                 </div>
             </div>
 
+        <div class="card">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <span>INSERTION SORT</span>
+                    <span class="seta">▶</span>
+                </div>
 
+                <div class="card-content">
+                    <p>Local do Arquivo: organizandoLista.js</p>
+                    <pre>
+const livros = require('./listaLivros');
+function insertionSort(lista) {
+    for(let atual = 0; atual < lista.length; atual++){
+        let analise = atual;
+        while(analise > 0 && lista[analise].preco < lista[analise - 1].preco){
+            let itemAnalise = lista[analise];
+            let itemAnterior = lista[analise - 1];
+
+            lista[analise] = itemAnterior
+            lista[analise - 1] = itemAnalise
+
+            analise--
+        }
+    }
+    console.log(lista);
+}
+insertionSort(livros);
+
+        </pre>
+                </div>
+            </div>
         </section>
 
         <!-- HTML -->
